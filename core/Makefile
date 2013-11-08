@@ -1301,13 +1301,10 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 	   -p $(HOST_OUT) \
 	   -k $(KEY_CERT_PAIR) \
 	   $(BUILT_TARGET_FILES_PACKAGE) $@
-
-
-  @echo "---------- Running kow's release tool ----------"
-  @chmod a+x $(KOWGAPPS)/squisher
-  $(hide) $(TARGET_CUSTOM_BUILDTOOL)
-  @echo "---------- Finished kow's release tool ----------"
-
+	@echo "---------- Running kow's release tool ----------"
+	@chmod a+x $(KOWGAPPS)/squisher
+	$(hide) $(TARGET_CUSTOM_BUILDTOOL)
+	@echo "---------- Finished kow's release tool ----------"
 
 .PHONY: otapackage
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
