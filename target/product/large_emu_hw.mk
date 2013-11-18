@@ -25,6 +25,7 @@ PRODUCT_PACKAGES := \
     Calculator \
     Calendar \
     CertInstaller \
+    LatinIME \
     Music \
     Provision \
     QuickSearchBox \
